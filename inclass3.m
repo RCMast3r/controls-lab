@@ -1,6 +1,6 @@
 clear all;close all; clc
 t=0:.05:15;
-G=tf(10,[1 1 9]);
+G=tf(5,[1 5]);
 u=ones(size(t));
 y=lsim(G,u,t);
 plot(t,y,'-r')
