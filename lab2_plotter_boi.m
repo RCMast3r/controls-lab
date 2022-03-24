@@ -1,9 +1,10 @@
+t=out.simout.Time(:,1);
+y=out.simout.Data(:,1);
 
-clear all;close all; clc
-t=0:.05:15;
-G=tf(5,[1 5]);
+% t=0:.05:15;
+G=tf(10,[1 1 9]);
 u=ones(size(t));
-y=lsim(G,u,t);
+%y=lsim(G,u,t);
 plot(t,y,'-r')
 y_ss=y(end);% steady state value
 a=find(abs(y-.1*y_ss) < 0.1,1);

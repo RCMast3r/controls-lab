@@ -1,7 +1,6 @@
-
 clear all;close all; clc
 t=0:.05:15;
-G=tf(5,[1 5]);
+G=tf(10,[1 1 9]);
 u=ones(size(t));
 y=lsim(G,u,t);
 plot(t,y,'-r')
@@ -31,3 +30,4 @@ plot([Peak_time, Peak_time],[0,y_max],'--k')
 plot([Settling_time,Settling_time],[0,ys],'--k')
 plot([t(1),t(end)],[1.02*y_ss,1.02*y_ss],'--k')
 plot([t(1),t(end)],[0.98*y_ss,0.98*y_ss],'--k')
+

@@ -1,0 +1,3 @@
+syms d t
+S = solve(d = ,t)
+
