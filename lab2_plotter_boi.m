@@ -14,7 +14,7 @@ y_max=max(y)
 c=find(y==y_max);
 Peak_time=t(c)
 OS=((y_max-y_ss)/y_ss)*100
-Error=1-y_ss;
+Error=1-y_ss
 d=find(abs(y-y_ss) < .02*y_ss);
 j=1;
 for i=1:length(d)
