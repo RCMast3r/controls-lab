@@ -1,6 +1,7 @@
 clear all;close all; clc
-t=0:.01:1;
-G=tf(20,[1 20]);
+t=0:.01:10;
+%G=tf(20,[1 20]);
+G = zpk([-6],[-2 -3 -5],4.7616)
 u=ones(size(t));
 y=lsim(G,u,t);
 plot(t,y,'-r')
